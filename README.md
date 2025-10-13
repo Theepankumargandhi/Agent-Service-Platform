@@ -55,10 +55,12 @@ streamlit run src/streamlit_app.py
 # Open the UI at http://localhost:8501
 ```
 
-# Services:
-# - Streamlit UI:   http://localhost:8501
-# - Agent API:      http://0.0.0.0:8080  (OpenAPI docs at /redoc)
-# - PostgreSQL:     localhost:5432
+**Services**
+
+- Streamlit UI: `http://localhost:8501`  
+- Agent API: `http://0.0.0.0:8080` (OpenAPI docs at `/redoc`)  
+- PostgreSQL: `localhost:5432`
+
 
 ```
 # Running the agents
