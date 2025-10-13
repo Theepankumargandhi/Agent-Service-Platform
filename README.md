@@ -41,7 +41,6 @@ cd agent-service-toolkit
 cp .env.example .env
 # edit .env -> OPENAI_API_KEY=...
 
-# (Option A) Use uv (recommended)
 curl -LsSf https://astral.sh/uv/install.sh | sh
 uv sync --frozen
 source .venv/bin/activate
@@ -54,14 +53,7 @@ source .venv/bin/activate
 streamlit run src/streamlit_app.py
 
 # Open the UI at http://localhost:8501
-
 ```
-# From the project root
-cp .env.example .env
-# edit .env with your API keys
-
-# Start all services with file-watching for hot-reload
-docker compose watch
 
 # Services:
 # - Streamlit UI:   http://localhost:8501
@@ -91,16 +83,13 @@ print(response.content)
 
 ```
 # RAG
-
 Place documents in ./data
-
 Build a local Chroma DB:
-
 ```
 python scripts/create_chroma_db.py
 ```
 # Project structure
-
+```
 ```
 agent-service-toolkit/
 ├─ compose.yaml
@@ -156,22 +145,17 @@ uv sync --frozen
 source .venv/bin/activate
 ```
 # To run this 
-
 ```
 python src/run_service.py
 streamlit run src/streamlit_app.py
 ```
-
 # Env configuration
-
 ```
 OPENAI_API_KEY=your_openai_key
 GROQ_API_KEY=optional_groq_key
 POSTGRES_URI=postgresql://user:pass@host:5432/db
 LANGSMITH_API_KEY=optional_for_tracing
 AUTH_SECRET=optional_api_auth_key
-
 ```
-
 
 The core design comes from JoshuaC215’s open-source work. I  made light changes for convenience. can i use this 
