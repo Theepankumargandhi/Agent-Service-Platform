@@ -159,5 +159,4 @@ POSTGRES_URI=postgresql://user:pass@host:5432/db
 LANGSMITH_API_KEY=optional_for_tracing
 AUTH_SECRET=optional_api_auth_key
 ```
-
-The core design comes from JoshuaC215’s open-source work. I  made light changes for convenience. can i use this 
+The core design comes from JoshuaC215’s open-source work. 
